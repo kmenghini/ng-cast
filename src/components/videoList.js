@@ -6,6 +6,7 @@ angular.module('video-player')
     currentIndex: '='
   },
   controller: function($scope) {
+
     // this.onClick = function(index) {
       
     // };

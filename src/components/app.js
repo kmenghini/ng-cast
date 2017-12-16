@@ -9,7 +9,7 @@ angular.module('video-player')
       this.currentVideo = this.videos[index];
     }.bind(this);
     this.searchResults = function() {
-
+      
     };
   },
   templateUrl: 'src/templates/app.html'
