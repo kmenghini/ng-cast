@@ -1,7 +1,7 @@
 angular.module('video-player')
 
 .component('search', {
-  controller: function() {
+  controller: function($scope) {
     this.result = function() {
       //searchText
     };

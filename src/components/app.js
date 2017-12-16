@@ -1,12 +1,14 @@
 angular.module('video-player')
 
 .component('app', {
-  controller: function() {
+  controller: function($scope) {
     this.videos = window.exampleVideoData;
-    this.video = this.videos[0];
+    this.currentIndex = 0;
+    this.currentVideo = this.videos[this.currentIndex];
     this.selectVideo = function(index) {
-      this.video = this.videos[index];
-    };
+      console.log(index);
+      this.currentVideo = this.videos[index];
+    }.bind(this);
     this.searchResults = function() {
 
     };

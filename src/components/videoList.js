@@ -2,13 +2,13 @@ angular.module('video-player')
 .component('videoList', {
   bindings: {
     videos: '<',
-    selectVideo: '<'
+    selectVideo: '<',
+    currentIndex: '='
   },
   controller: function($scope) {
-    this.onClick = function(index) {
-      console.log(index);
-      this.selectVideo(index);
-    };
+    // this.onClick = function(index) {
+      
+    // };
   },
   templateUrl: 'src/templates/videoList.html'
 });
