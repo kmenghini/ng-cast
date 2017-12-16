@@ -6,7 +6,7 @@ angular.module('video-player')
     params: {
       'maxResults': 5,
       'part': 'snippet',
-      'q': defaultSearch.query,
+      'q': this.searchObj,
       'type': 'video',
       'key': window.YOUTUBE_API_KEY,
       'videoEmbeddable': 'true'
@@ -15,7 +15,9 @@ angular.module('video-player')
     .then(function successCallback(response) {
       console.log('success!');
       console.log(response.data.items);
-      //array is at response.data.items
+      let videoArray = response.data.items;
+      return videoArray;
+      //run this.searchResults on app with (response.data.items)
     }, function errorCallback(response) {
       console.log('error: ', response);
     });
