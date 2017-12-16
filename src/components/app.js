@@ -3,8 +3,7 @@ angular.module('video-player')
 .component('app', {
   controller: function($scope) {
     this.videos = window.exampleVideoData;
-    this.currentIndex = 0;
-    this.currentVideo = this.videos[this.currentIndex];
+    this.currentVideo = this.videos[0];
     this.selectVideo = function(index) {
       console.log(index);
       this.currentVideo = this.videos[index];
@@ -15,3 +14,6 @@ angular.module('video-player')
   },
   templateUrl: 'src/templates/app.html'
 });
+
+
+//window.YOUTUBE_API_KEY
