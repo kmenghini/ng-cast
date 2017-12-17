@@ -6,8 +6,5 @@ angular.module('video-player')
     index: '<',
     selectVideo: '<'
   },
-  controller: function() {
-    
-  },
   templateUrl: 'src/templates/videoListEntry.html'
 });

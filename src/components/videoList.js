@@ -5,11 +5,5 @@ angular.module('video-player')
     selectVideo: '<',
     currentIndex: '='
   },
-  controller: function($scope) {
-
-    // this.onClick = function(index) {
-      
-    // };
-  },
   templateUrl: 'src/templates/videoList.html'
 });

@@ -2,12 +2,9 @@ angular.module('video-player')
 
 .component('search', {
   bindings: {
-    searchResults: '<'
-  },
-  controller: function($scope, youTube) {
-
-    // youTube();
- 
+    searchResults: '<',
+    searchObj: '<',
+    videos: '<'
   },
   templateUrl: 'src/templates/search.html'
 });

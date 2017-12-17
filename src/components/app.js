@@ -12,23 +12,18 @@ angular.module('video-player')
       console.log(index);
       this.currentVideo = this.videos[index];
     }.bind(this);
-    // this.searchResults = function() {
-    //   //this.videos = result of ajax request
-    //   youTube(searchObj);
-    // },
-    this.searchResults = function(searchText) {    
+    this.searchResults = function(searchText, searchObj) {    
       this.searchObj = {
         'max': 5,
         'query': searchText,
       };
-      this.videos = youTube.$$state.value;
-      // searchObj = search;
-      console.log(youTube);//array of videos
-      console.log(this.searchObj);
-      //run youTube function with input 'search'
-      // youTube();
-      //store result as this.result  
+      youTube.search(this.searchObj)
+        .then(data => this.youtubeVid(data));
     }.bind(this);
+    this.youtubeVid = function (data) {
+      this.videos = data;
+      this.currentVideo = data[0];
+    };
   },
   templateUrl: 'src/templates/app.html'
 });
